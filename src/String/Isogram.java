@@ -4,12 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * Given a string S of lowercase aplhabets, check if it is isogram or not. An
+ * Isogram is a string in which no letter occurs more than once.
+ * 
+ * @author purushi1.macbook
+ *
+ */
 public class Isogram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-System.out.println(occurance("manjula"));
-System.out.println(occurance("manjul"));
+		System.out.println(occurance("manjula"));
+		System.out.println(occurance("manjul"));
 	}
 
 	public static boolean occurance(String s) {
@@ -29,7 +36,7 @@ System.out.println(occurance("manjul"));
 				return false;
 			}
 		}
-		
+
 		return true;
 
 	}

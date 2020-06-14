@@ -5,7 +5,7 @@ public class NthnumbermadePrimeNumber {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int number = 21;  
-	    System.out.println(getPrime(10)); 
+	    System.out.println(getPrime(number)); 
 	}
 	
 	

@@ -7,8 +7,8 @@ public class RabinKarpAlgorithm {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String txt = "ManjulaPuru";
-		String pat = "Puru";
+		String txt = "manjulaalak";
+		String pat = "la";
 		
 		System.out.println(patternSearch( txt.toCharArray(),pat.toCharArray()));
 
@@ -23,12 +23,12 @@ public class RabinKarpAlgorithm {
         long textHash = createHash(text, m - 1);
         
         //can have n-m+1 ......7+1 
-        for (int i = 1; i <= n - m + 1; i++) {
-            if(patternHash == textHash && checkEqual(text, i - 1, i + m - 2, pattern, 0, m - 1)) {
-                return i - 1;
+        for (int i = 0; i <= n - m  ; i++) {
+            if(patternHash == textHash && checkEqual(text, i, i + m - 1, pattern, 0, m - 1)) {
+                return i+1;
             }
-            if(i < n - m + 1) {
-                textHash = recalculateHash(text, i - 1, i + m - 1, textHash, m);
+            else{
+                textHash = recalculateHash(text, i , i + m, textHash, m);
             }
         }
         return -1;

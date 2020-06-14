@@ -11,25 +11,27 @@ public class MaxOccuringCharacter {
 		System.out.println(occurance("manjula"));
 	}
 
-	public static int occurance(String s) {
+	public static char occurance(String s) {
 		char array[] = s.toCharArray();
 		Map<Character, Integer> map = new HashMap<>();
 
 		int res = Integer.MIN_VALUE;
-
+		int indexMax = -1;
 		for (int i = 0; i < array.length; i++) {
 			if (map.containsKey(array[i])) {
 				map.put(array[i], map.get(array[i]) + 1);
+				
+				if (res < map.get(array[i])) {
+					res = map.get(array[i]);
+					indexMax = i;
+				}
+				
 			} else {
 				map.put(array[i], 1);
 			}
 		}
 
-		for (Entry<Character, Integer> entry : map.entrySet()) {
-			res = Math.max(res, entry.getValue());
-		}
-
-		return res;
+		return s.charAt(indexMax);
 
 	}
 

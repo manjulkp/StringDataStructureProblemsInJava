@@ -31,7 +31,7 @@ public class Pangram {
 
 		}
 
-		for (int i = 0; i <= 25; i++)
+		for (int i = 0; i <= 26; i++)
 			if (mark[i] == false)
 				return (false);
 		return true;

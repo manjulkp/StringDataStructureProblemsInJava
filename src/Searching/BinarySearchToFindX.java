@@ -13,12 +13,7 @@ public class BinarySearchToFindX {
 
 	}
 	
-	public static int searchElement(int arr[],int low,int high,int x)
-	{
-		if(low<)
-		return x;
-		
-	}
+
 
 	public static int search(int arr[], int low, int high, int x) {
 		if (low <= high) {
